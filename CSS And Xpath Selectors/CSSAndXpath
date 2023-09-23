@@ -1,0 +1,53 @@
+'Sign up' header: 
+$$ ('h4.text-center')
+$x ('//h4[contains(@class, "text-center")]')
+
+'Username' field:
+$$ ('input[name="username"]')
+$x ('//input[@name = "username"]')
+
+'Email' field:
+$$ ('input[type="email"]')
+$x ('//input[@type = "email"]')
+
+
+'Password' field:
+$$ ('#defaultRegisterFormPassword')
+$x ('//input[@id = "defaultRegisterFormPassword"]')
+
+
+'Confirm Password' field:
+$$ ('#defaultRegisterPhonePassword')
+$x('//input[@id = "defaultRegisterPhonePassword"]')
+
+'Sign in' button:
+$$ ('button[id=sign-in-button]')
+$$ ('button.btn ')
+$$ ('button[type="submit"]')
+
+$x ('//button[@id = "sign-in-button"]')
+$x ('//button[@type = "submit"]')
+$x ('//button[contains(@class, "btn")]')
+
+
+'Logo' within the Navigation bar :
+$$ ('img[id="homeIcon"]')
+$x ('//img[@id = "homeIcon"]')
+
+'Home' button within the Navigation bar:
+$$ ('a[id="nav-link-home"]')
+$x ('//a[@id = "nav-link-home"]')
+
+'Login' button within the Navigation bar:
+$$ ('a[id="nav-link-login"]')
+$x ('//a[@id = "nav-link-login"]')
+
+'Field is required' message:
+Field is required - Username: $$ input[name="username"]+span.invalid-feedback
+Field is required - Email:    $$ input[type="email"]+span.invalid-feedback
+Field is required - Password: $$ #defaultRegisterFormPassword+span.invalid-feedback
+
+
+Field is required - Username: $x ('//input[@name = "username"]/following-sibling::span')
+Field is required - Email:    $x ('//input[@type="email"]/following-sibling::span')
+Field is required - Password: $x ('//input[@id="defaultRegisterFormPassword"]/following-sibling::span')
